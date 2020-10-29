@@ -1,0 +1,186 @@
+{
+    "manifestVersion": 1,
+    "id": "topcoder-x",
+    "publisher": "JustinGasperTopcodertest",
+    "version": "1.0.63",
+    "name": "Topcoder X",
+    "description": "Topcoder X is an application used by copilots to manage direct tasks.",
+    "public": false,
+    "categories": ["Azure Repos", "Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services" 
+        }
+    ],
+    "scopes": [
+        "vso.work"
+    ],
+    "contributions": [
+        {
+            "id": "tcx-hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-work-web.work-hub-group"
+            ],
+            "properties": {
+                "name": "Topcoder X",
+                "uri": "index.html?context=hub"
+            }
+        },
+        {
+            "id": "tcx-widget",
+            "type": "ms.vss-dashboards-web.widget",
+            "targets": [
+                "ms.vss-dashboards-web.widget-catalog"
+            ],
+            "properties": {
+                "name": "Topcoder X",
+                "description": "Topcoder X widget",
+                "uri": "index.html?context=widget",
+                "catalogIconUrl": "logo192.png",
+                "previewImageUrl": "logo512.png",
+                "supportedSizes": [
+                     {
+                            "rowSpan": 5,
+                            "columnSpan": 5
+                        }
+                    ],
+                "supportedScopes": ["project_team"]
+            }
+        },
+        {
+            "id": "tcx-workitem-send-github",
+            "type": "ms.vss-web.action",
+            "description": "Send to Github",
+            "targets": [
+                "ms.vss-work-web.work-item-query-menu",
+                "ms.vss-work-web.work-item-toolbar-menu",
+                "ms.vss-work-web.work-item-context-menu",
+                "ms.vss-work-web.query-result-work-item-menu",
+                "ms.vss-work-web.backlog-item-menu"
+            ],
+            "properties": {
+                "text": "Send to Github",
+                "title": "Send to Github",
+                "groupId": "actions",
+                "uri": "index.html?context=actions-send-github"
+            }
+        },
+        {
+            "id": "tcx-workitem-send-topcoder",
+            "type": "ms.vss-web.action",
+            "description": "Send to Topcoder",
+            "targets": [
+                "ms.vss-work-web.work-item-query-menu",
+                "ms.vss-work-web.work-item-toolbar-menu",
+                "ms.vss-work-web.work-item-context-menu",
+                "ms.vss-work-web.query-result-work-item-menu",
+                "ms.vss-work-web.backlog-item-menu"
+            ],
+            "properties": {
+                "text": "Send to Topcoder",
+                "title": "Send to Topcoder",
+                "groupId": "actions",
+                "uri": "index.html?context=actions-send-topcoder"
+            }
+        },
+        {
+            "id": "tcx-widget-report",
+            "type": "ms.vss-dashboards-web.widget",
+            "targets": [
+                "ms.vss-dashboards-web.widget-catalog",
+                ".tcx-widget-report.configuration"
+            ],
+            "properties": {
+                "name": "Topcoder X Report",
+                "description": "Topcoder X report widget",
+                "uri": "index.html?context=widget-report",
+                "catalogIconUrl": "logo192.png",
+                "previewImageUrl": "logo512.png",
+                "supportedSizes": [
+                    {
+                        "rowSpan": 3,
+                        "columnSpan": 6
+                    }
+                ],
+                "supportedScopes": [
+                    "project_team"
+                ]
+            }
+        },
+        {
+            "id": "tcx-widget-report.configuration",
+            "type": "ms.vss-dashboards-web.widget-configuration",
+            "targets": [
+                "ms.vss-dashboards-web.widget-configuration"
+            ],
+            "properties": {
+                "name": "Topcoder X Report Widget Configuration",
+                "description": "Configures Topcoder X Report Widget",
+                "uri": "index.html?context=widget-report-configuration"
+            }
+        },
+        {
+            "id": "tcx-wit-form-group",
+            "type": "ms.vss-work-web.work-item-form-group",
+            "description": "Topcoder X work item form group",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "Topcoder X",
+                "uri": "index.html?context=wit-form-group",
+                "height": 600
+            }
+        },
+        {
+            "id": "tcx-wit-form-page",
+            "type": "ms.vss-work-web.work-item-form-page",
+            "description": "Topcoder X Work Item Page",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "Topcoder X",
+                "uri": "index.html?context=wit-form-page"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "build/index.html",
+            "addressable": true,
+            "packagePath": "index.html"
+        },
+        {
+            "path": "build/action.html",
+            "addressable": true,
+            "packagePath": "action.html"
+        },
+        {
+            "path": "build/static",
+            "addressable": true,
+            "packagePath": "static"
+        },
+        {
+            "path": "build/manifest.json",
+            "addressable": true,
+            "packagePath": "manifest.json"
+        },
+        {
+            "path": "build/logo192.png",
+            "addressable": true,
+            "packagePath": "logo192.png"
+        },
+        {
+            "path": "build/logo512.png",
+            "addressable": true,
+            "packagePath": "logo512.png"
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        }
+    ]
+}
