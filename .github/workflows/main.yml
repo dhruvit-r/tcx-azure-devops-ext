@@ -30,8 +30,6 @@ jobs:
     steps:
       - name: Checking out master branch
         uses: actions/checkout@master
-        with:
-          ref: develop
       - name: Setting up nodejs version 10
         uses: actions/setup-node@v1
         with:
